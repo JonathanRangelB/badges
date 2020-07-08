@@ -4,12 +4,10 @@ import Badge from './components/Badge';
 import 'bootstrap/dist/css/bootstrap.css';
 import './global.css';
 
+import BadgeNew from './pages/BadgeNew'
+
 const container = document.getElementById('app');
 
-ReactDOM.render(<Badge
-    firstName='Jonathan'
-    lastName='Rangel'
-    jobTitle='Frontend Developer'
-    twitter="JonathanRangelB"
-    avatar="https://www.gravatar.com/avatar?d=identicon"
+ReactDOM.render(<BadgeNew
+
     />, container)
