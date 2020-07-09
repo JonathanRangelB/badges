@@ -1,0 +1,14 @@
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  background: url("../../images/stars.svg"), #1b1b25;
+  background-repeat: repeat;
+}
+
+.image404 {
+    width: 70%;
+}
