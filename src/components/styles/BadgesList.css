@@ -8,6 +8,7 @@
     border-radius: 10px;
     overflow: hidden;
     padding: 4px;
+    border-right: 1px solid rgb(180, 180, 180);
 }
 
 .badge-container__user-image{
