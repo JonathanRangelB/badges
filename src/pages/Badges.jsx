@@ -3,76 +3,67 @@ import "./styles/Badges.css";
 import logo from "../images/badge-header.svg";
 import BadgesList from "../components/BadgesList";
 import { Link } from "react-router-dom";
+import Api from "../api";
+import PageLoading from '../components/PageLoading'
+import PageError from '../components/PageError'
 
 export class Badges extends Component {
-  constructor(props) {//solo usamos constructor si necesitamos enlazar eventos del padre o si necesitamos inicializar el estado
+  constructor(props) {
+    //solo usamos constructor si necesitamos enlazar eventos del padre o si necesitamos inicializar el estado
     console.log("1. constructor()");
     super(props); //si o si, debemos de llamar al constructor padre y mandarle los props, en este caso el padre es Component
     this.state = {
-      data: [],
+      data: undefined,
+      loading: true,
+      error: null,
     };
   }
+
   componentDidMount() {
-    console.log("3. componentDidMount()");
-
-    this.timer = setTimeout(() => { //setTimeout nos regresa un id cuando se manda llamar, y lo guardamos en timer
-      this.setState({
-        data: [
-          {
-            id: "2de30c42-9deb-40fc-a41f-05e62b5939a7",
-            firstName: "Freda",
-            lastName: "Grady",
-            email: "Leann_Berge@gmail.com",
-            jobTitle: "Legacy Brand Director",
-            twitter: "FredaGrady222217573",
-            avatarUrl:
-              "https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon",
-          },
-          {
-            id: "d00d3614-101a-44ca-b6c2-0be075aeed3d",
-            firstName: "Major",
-            lastName: "Rodriguez",
-            email: "Ilene66@hotmail.com",
-            jobTitle: "Human Research Architect",
-            twitter: "ajorRodriguez61545",
-            avatarUrl:
-              "https://www.gravatar.com/avatar/d57a8be8cb9219609905da25d5f3e50a?d=identicon",
-          },
-          {
-            id: "63c03386-33a2-4512-9ac1-354ad7bec5e9",
-            firstName: "Daphney",
-            lastName: "Torphy",
-            email: "Ron61@hotmail.com",
-            jobTitle: "National Markets Officer",
-            twitter: "DaphneyTorphy96105",
-            avatarUrl:
-              "https://www.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon",
-          },
-        ],
-      });
-    }, 3000);
+    this.fetchData();
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    console.log("5. componentDidUpdate()");
+  fetchData = async () => {
+    this.setState({ loading: true, error: null });
 
-    console.log({
-      prevProps: prevProps,
-      prevState: prevState,
-    });
+    try {
+      const data = await Api.badges.list();
+      this.setState({ loading: false, data: data });
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
+  };
 
-    console.log({
-      props: this.props,
-      state: this.state,
-    });
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   console.log("5. componentDidUpdate()");
 
-  componentWillUnmount() {
-    console.log("6. componentWillUnmount()");
-    clearTimeout(this.timer) //antes de desmontar el componente, nos aseguramos de limpiar el setTimeout del eventloop
-  }
+  //   console.log({
+  //     prevProps: prevProps,
+  //     prevState: prevState,
+  //   });
+
+  //   console.log({
+  //     props: this.props,
+  //     state: this.state,
+  //   });
+  // }
+
+  // componentWillUnmount() {
+  //   console.log("6. componentWillUnmount()");
+  //   clearTimeout(this.timer) //antes de desmontar el componente, nos aseguramos de limpiar el setTimeout del eventloop
+  // }
+
   render() {
-    console.log("2. render()");
+    if (this.state.loading) {
+      return(
+        <PageLoading/>
+      )
+    }
+
+    if (this.state.error) {
+      return <PageError error={this.state.error}/>;
+    }
+
     return (
       <React.Fragment>
         <div className="Badges">
