@@ -15,27 +15,27 @@ export class BadgeForm extends Component {
     console.log("Button was clicked");
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form was submitted");
-    console.log(this.state);
-  };
+  // handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Form was submitted");
+  //   console.log(this.state);
+  // };
 
   render() {
     return (
       <React.Fragment>
         <h1>New Attendant</h1>
 
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label>First Name</label>
             <input
               onChange={this.props.onChange}
               type="text"
-              name="FirstName"
+              name="firstName"
               className="form-control"
               required
-              value={this.props.formValues.FirstName}
+              value={this.props.formValues.firstName}
             />
           </div>
           <div className="form-group">
@@ -43,10 +43,10 @@ export class BadgeForm extends Component {
             <input
               onChange={this.props.onChange}
               type="text"
-              name="LastName"
+              name="lastName"
               className="form-control"
               required
-              value={this.props.formValues.LastName}
+              value={this.props.formValues.lastName}
             />
           </div>
           <div className="form-group">
@@ -54,10 +54,10 @@ export class BadgeForm extends Component {
             <input
               onChange={this.props.onChange}
               type="email"
-              name="Email"
+              name="email"
               className="form-control"
               required
-              value={this.props.formValues.Email}
+              value={this.props.formValues.email}
             />
           </div>
           <div className="form-group">
@@ -65,10 +65,10 @@ export class BadgeForm extends Component {
             <input
               onChange={this.props.onChange}
               type="text"
-              name="JobTitle"
+              name="jobTitle"
               className="form-control"
               required
-              value={this.props.formValues.JobTitle}
+              value={this.props.formValues.jobTitle}
             />
           </div>
           <div className="form-group">
@@ -76,10 +76,10 @@ export class BadgeForm extends Component {
             <input
               onChange={this.props.onChange}
               type="text"
-              name="Twitter"
+              name="twitter"
               className="form-control"
               required
-              value={this.props.formValues.Twitter}
+              value={this.props.formValues.twitter}
             />
           </div>
           <button onClick={this.handelClick} className="btn btn-primary">

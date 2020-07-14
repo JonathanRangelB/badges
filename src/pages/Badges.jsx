@@ -10,7 +10,6 @@ import PageError from '../components/PageError'
 export class Badges extends Component {
   constructor(props) {
     //solo usamos constructor si necesitamos enlazar eventos del padre o si necesitamos inicializar el estado
-    console.log("1. constructor()");
     super(props); //si o si, debemos de llamar al constructor padre y mandarle los props, en este caso el padre es Component
     this.state = {
       data: undefined,

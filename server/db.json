@@ -440,6 +440,33 @@
       "jobTitle": "Lawyer",
       "twitter": "ckaufmanpr",
       "id": "npaYZKI"
+    },
+    {
+      "firstName": "Jonathan",
+      "lastName": "Bernal",
+      "avatarUrl": "https://s.gravatar.com/avatar/ea5552a210a396abc7adcb8a87b05219?d=identicon",
+      "email": "necrobahamut1988@gmail.com",
+      "jobTitle": "Frontend Developer",
+      "twitter": "jonathanrangelb",
+      "id": "fCUGuQ9"
+    },
+    {
+      "firstName": "Jonathan",
+      "lastName": "Bernal",
+      "avatarUrl": "https://s.gravatar.com/avatar/b83608d9a393b24780d9cb9ee9bddddb?d=identicon",
+      "email": "necrobahamut@hotmail.com",
+      "jobTitle": "Frontend Developer",
+      "twitter": "jonathanrangelb",
+      "id": "5trU8I1"
+    },
+    {
+      "firstName": "Jonathan",
+      "lastName": "Rangel",
+      "avatarUrl": "https://s.gravatar.com/avatar/3cd6855085bd8eadad514b7d80a3a800?d=identicon",
+      "email": "jonathanrangelb@gmail.com",
+      "jobTitle": "Frontend Developer",
+      "twitter": "jonathanrangelb",
+      "id": "UXVG8pg"
     }
   ]
 }
