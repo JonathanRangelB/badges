@@ -4,8 +4,8 @@ import logo from "../images/badge-header.svg";
 import BadgesList from "../components/BadgesList";
 import { Link } from "react-router-dom";
 import Api from "../api";
-import PageLoading from '../components/PageLoading'
-import PageError from '../components/PageError'
+import PageLoading from "../components/PageLoading";
+import PageError from "../components/PageError";
 
 export class Badges extends Component {
   constructor(props) {
@@ -20,6 +20,12 @@ export class Badges extends Component {
 
   componentDidMount() {
     this.fetchData();
+
+    this.intervalId = setInterval(() => this.fetchData(), 5000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalId);
   }
 
   fetchData = async () => {
@@ -53,14 +59,12 @@ export class Badges extends Component {
   // }
 
   render() {
-    if (this.state.loading) {
-      return(
-        <PageLoading/>
-      )
+    if (this.state.loading && !this.state.data) {
+      return <PageLoading />;
     }
 
     if (this.state.error) {
-      return <PageError error={this.state.error}/>;
+      return <PageError error={this.state.error} />;
     }
 
     return (
