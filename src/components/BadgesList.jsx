@@ -1,24 +1,54 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./styles/BadgesList.css";
 import twitterLogo from "../images/twitter.svg";
 import { Link } from "react-router-dom";
 // import Gravatar from "./Gravatar";
 
-export class BadgesList extends Component {
-  render() {
-    if (this.props.badges.length === 0) {
-      return (
-        <div>
-          <h1>No Badges where found</h1>
-          <Link className="btn btn-primary" to="/badges/new">
-            Create your first Badge!
-          </Link>
-        </div>
-      );
-    }
+function BadgesList(props) {
+  const badges = props.badges;
+
+  const [query, setQuery] = useState("");
+
+  const filteredBadges = badges.filter((badge) => {
+    return `${badge.firstName} ${badge.lastName}`
+      .toLocaleLowerCase()
+      .includes(query.toLocaleLowerCase());
+  });
+
+  if (filteredBadges.length === 0) {
     return (
+      <>
+        <div className="form-group">
+          <label>Filter Badge:</label>
+          <input
+            className="form-control"
+            value={query}
+            onChange={(e) => {
+              setQuery(e.target.value);
+            }}
+          />
+        </div>
+        <h1>No Badges where found</h1>
+        <Link className="btn btn-primary" to="/badges/new">
+          Create your first Badge!
+        </Link>
+      </>
+    );
+  }
+  return (
+    <>
+      <div className="form-group">
+        <label>Filter Badge:</label>
+        <input
+          className="form-control"
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+          }}
+        />
+      </div>
       <ul className="list-unstyled">
-        {this.props.badges.map((badge) => {
+        {filteredBadges.map((badge) => {
           return (
             <li key={badge.id}>
               <Link
@@ -56,8 +86,8 @@ export class BadgesList extends Component {
           );
         })}
       </ul>
-    );
-  }
+    </>
+  );
 }
 
 export default BadgesList;

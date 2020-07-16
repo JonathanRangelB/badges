@@ -83,7 +83,6 @@ export class Badges extends Component {
               New Badge
             </Link>
           </div>
-
           <div className="Badges__list">
             <div className="Badges__container"></div>
             <BadgesList badges={this.state.data} />
