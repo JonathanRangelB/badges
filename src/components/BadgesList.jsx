@@ -11,8 +11,15 @@ function BadgesList(props) {
 
   const filteredBadges = badges.filter((badge) => {
     return `${badge.firstName} ${badge.lastName}`
-      .toLocaleLowerCase()
-      .includes(query.toLocaleLowerCase());
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .includes(
+        query
+          .normalize("NFKD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .toLowerCase()
+      );
   });
 
   if (filteredBadges.length === 0) {
