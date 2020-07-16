@@ -10,33 +10,6 @@
       "avatarUrl": "https://www.gravatar.com/avatar/f63a9c45aca0e7e7de0782a6b1dff40b?d=identicon"
     },
     {
-      "id": "d00d3614-101a-44ca-b6c2-0be075aeed3d",
-      "firstName": "Major",
-      "lastName": "Rodriguez",
-      "email": "Ilene66@hotmail.com",
-      "jobTitle": "Human Research Architect",
-      "twitter": "MajorRodriguez61545",
-      "avatarUrl": "https://www.gravatar.com/avatar/d57a8be8cb9219609905da25d5f3e50a?d=identicon"
-    },
-    {
-      "id": "63c03386-33a2-4512-9ac1-354ad7bec5e9",
-      "firstName": "Daphney",
-      "lastName": "Torphys",
-      "email": "Ron61@hotmail.com",
-      "jobTitle": "National Markets Officer",
-      "twitter": "DaphneyTorphy96105",
-      "avatarUrl": "https://s.gravatar.com/avatar/e74e87d40e55b9ff9791c78892e55cb7?d=identicon"
-    },
-    {
-      "id": "a9748581-dfdc-4a78-930d-5205a2ccef48",
-      "firstName": "Tatyana",
-      "lastName": "Von",
-      "email": "Herminio.Schmeler@hotmail.com",
-      "jobTitle": "Central Branding Representative",
-      "twitter": "TatyanaVon35871-3686",
-      "avatarUrl": "https://www.gravatar.com/avatar/98c382edd93414c1649b9db866000f97?d=identicon"
-    },
-    {
       "id": "1921a734-cc05-4f71-a677-ffe38dda6958",
       "firstName": "Maude",
       "lastName": "Effertz",
@@ -455,45 +428,9 @@
       "lastName": "Bernal",
       "avatarUrl": "https://s.gravatar.com/avatar/b83608d9a393b24780d9cb9ee9bddddb?d=identicon",
       "email": "necrobahamut@hotmail.com",
-      "jobTitle": "Frontend Developer",
+      "jobTitle": "Frontend Developer master",
       "twitter": "jonathanrangelb",
       "id": "5trU8I1"
-    },
-    {
-      "firstName": "Jonathan",
-      "lastName": "Rangel",
-      "avatarUrl": "https://s.gravatar.com/avatar/3cd6855085bd8eadad514b7d80a3a800?d=identicon",
-      "email": "jonathanrangelb@gmail.com",
-      "jobTitle": "Frontend Developer",
-      "twitter": "jonathanrangelb",
-      "id": "UXVG8pg"
-    },
-    {
-      "firstName": "Jonathan",
-      "lastName": "Rangel",
-      "avatarUrl": "https://s.gravatar.com/avatar/3cd6855085bd8eadad514b7d80a3a800?d=identicon",
-      "email": "jonathanrangelb@gmail.com",
-      "jobTitle": "a",
-      "twitter": "a",
-      "id": "uybHPHA"
-    },
-    {
-      "firstName": "asfdas",
-      "lastName": "asdf",
-      "avatarUrl": "https://s.gravatar.com/avatar/2e721c181ffab665d10f0730adda1169?d=identicon",
-      "email": "asdfsa@asd.com",
-      "jobTitle": "asdf",
-      "twitter": "asdf",
-      "id": "dcbGMNx"
-    },
-    {
-      "firstName": "pepesssss",
-      "lastName": "pepessss",
-      "avatarUrl": "https://s.gravatar.com/avatar/3cd6855085bd8eadad514b7d80a3a800?d=identicon",
-      "email": "jonathanrangelb@gmail.com",
-      "jobTitle": "pepesss",
-      "twitter": "pepesss",
-      "id": "mXk1mA2"
     }
   ]
 }
