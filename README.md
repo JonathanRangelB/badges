@@ -10,7 +10,14 @@ Simply create a new badge or view the ones alrready created. Fill the fields and
 
 Have fun.
 
+Main page
 ![Main](https://i.imgur.com/i3feCbv.png)
+
+List of badges
+![Badges](https://i.imgur.com/lTlO4LQ.png)
+
+Create your Badge
+![Create](https://i.imgur.com/gx1KKIr.png)
 
 ## Installation
 
